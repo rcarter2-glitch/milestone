@@ -1,81 +1,824 @@
-</header>
-<link rel="stylesheet" href="style.css">
-<main>
+``html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Home -->
-    <section id="home">
-        <h2>Welcome to Sports Central</h2>
-        <p>Your source for sports news, featured teams, and athlete information.</p>
+    <title>Sports Central</title>
 
-        <h2>Featured Sports</h2>
+    <!-- Google Font Pairing -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <div class="card-container">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet"
+    >
 
-            <article class="card">
-                <h3>Football</h3>
-                <p>Latest football news, scores, and highlights.</p>
-            </article>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-            <article class="card">
-                <h3>Basketball</h3>
-                <p>Latest basketball news, rankings, and game recaps.</p>
-            </article>
+<body>
 
-            <article class="card">
-                <h3>Soccer</h3>
-                <p>Latest soccer matches, standings, and player updates.</p>
-            </article>
+    <!-- Header -->
+    <header class="site-header">
 
-        </div>
-    </section>
+        <h1>Sports Central</h1>
 
-    <!-- Teams -->
-    <section id="teams">
-        <h2>Featured Teams</h2>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+                <li>
+                    <a href="#home" aria-current="page">Home</a>
+                </li>
 
-        <div class="card-container">
+                <li>
+                    <a href="#teams">Teams</a>
+                </li>
 
-            <article class="card">
-                <h3>Dallas Cowboys</h3>
-                <p>One of the NFL's most popular football teams.</p>
-            </article>
+                <li>
+                    <a href="#about">About & Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-            <article class="card">
-                <h3>Los Angeles Lakers</h3>
-                <p>A legendary NBA franchise with multiple championships.</p>
-            </article>
+    </header>
 
-            <article class="card">
-                <h3>Manchester City</h3>
-                <p>A top English Premier League soccer club.</p>
-            </article>
 
-        </div>
-    </section>
+    <main>
 
-    <!-- About -->
-    <section id="about">
-        <h2>About Sports Central</h2>
+        <!-- Home -->
+        <section id="home">
+
+            <h2>Welcome to Sports Central</h2>
+
+            <p>
+                Your source for sports news, featured teams,
+                and athlete information.
+            </p>
+
+            <h2>Featured Sports</h2>
+
+            <div class="card-container">
+
+                <article class="card">
+                    <h3>Football</h3>
+
+                    <p>
+                        Latest football news, scores, and highlights.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>Basketball</h3>
+
+                    <p>
+                        Latest basketball news, rankings, and game recaps.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>Soccer</h3>
+
+                    <p>
+                        Latest soccer matches, standings, and player updates.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Teams -->
+        <section id="teams">
+
+            <h2>Featured Teams</h2>
+
+            <div class="card-container">
+
+                <article class="card">
+                    <h3>Dallas Cowboys</h3>
+
+                    <p>
+                        One of the NFL's most popular football teams.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>Los Angeles Lakers</h3>
+
+                    <p>
+                        A legendary NBA franchise with multiple championships.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>Manchester City</h3>
+
+                    <p>
+                        A top English Premier League soccer club.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- About and Contact -->
+        <section id="about">
+
+            <h2>About Sports Central</h2>
+
+            <p>
+                Sports Central is a website created for sports fans
+                to explore information about popular sports, teams,
+                and current events.
+            </p>
+
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Have a question or suggestion?
+                Complete the form below to contact the Sports Central team.
+            </p>
+
+
+            <!-- Accessible Contact Form -->
+            <form class="contact-form" action="#" method="post">
+
+                <!-- Name -->
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                        <span class="required" aria-hidden="true">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        required
+                        aria-required="true"
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                        <span class="required" aria-hidden="true">*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                        aria-required="true"
+                    >
+
+                </div>
+
+
+                <!-- Topic -->
+                <fieldset>
+
+                    <legend>What is your message about?</legend>
+
+                    <div class="radio-option">
+
+                        <input
+                            type="radio"
+                            id="question"
+                            name="topic"
+                            value="question"
+                        >
+
+                        <label for="question">
+                            General Question
+                        </label>
+
+                    </div>
+
+
+                    <div class="radio-option">
+
+                        <input
+                            type="radio"
+                            id="feedback"
+                            name="topic"
+                            value="feedback"
+                        >
+
+                        <label for="feedback">
+                            Website Feedback
+                        </label>
+
+                    </div>
+
+
+                    <div class="radio-option">
+
+                        <input
+                            type="radio"
+                            id="sports-news"
+                            name="topic"
+                            value="sports-news"
+                        >
+
+                        <label for="sports-news">
+                            Sports News
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Message -->
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                        <span class="required" aria-hidden="true">*</span>
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        aria-required="true"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Accessible Error Message -->
+                <p
+                    id="form-error"
+                    class="error-message"
+                    role="alert"
+                    hidden
+                >
+                    Please correct the errors above before submitting the form.
+                </p>
+
+
+                <!-- Submit -->
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
 
         <p>
-            Sports Central is a website created for sports fans to explore
-            information about popular sports, teams, and current events.
+            &copy; 2026 Sports Central. All rights reserved.
         </p>
 
-        <h2>Contact Us</h2>
-
-        <h3>Email</h3>
-        <p>sportscentral@email.com</p>
-
-        <h3>Follow Us</h3>
-        <p>Facebook, Instagram, and X links will be added later.</p>
-    </section>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Sports Central. All Rights Reserved.</p>
-</footer>
+    </footer>
 
 </body>
 </html>
+```
+
+### `styles.css`
+
+```css
+/* ==============================
+   SPORTS CENTRAL
+   ============================== */
+
+:root {
+    --navy: #12355b;
+    --dark-navy: #0b2545;
+    --blue: #1d5fa7;
+    --background: #f4f7fb;
+    --white: #ffffff;
+    --text: #1f2937;
+    --border: #b8c4d1;
+    --error: #a61b1b;
+
+    /* 8px spacing system */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+}
+
+
+/* ==============================
+   BASIC STYLING
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--background);
+    color: var(--text);
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--dark-navy);
+    line-height: 1.25;
+}
+
+
+h1 {
+    font-size: 2.25rem;
+}
+
+
+h2 {
+    margin-bottom: var(--space-3);
+    font-size: 1.75rem;
+}
+
+
+h3 {
+    margin-bottom: var(--space-1);
+    font-size: 1.25rem;
+}
+
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--space-2);
+}
+
+
+/* ==============================
+   ACCESSIBLE FOCUS
+   ============================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.site-header {
+    padding: var(--space-3) var(--space-4);
+
+    background-color: var(--dark-navy);
+    color: var(--white);
+}
+
+
+.site-header h1 {
+    margin-bottom: var(--space-2);
+    color: var(--white);
+}
+
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-2);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.nav-list a {
+    display: inline-block;
+
+    padding: var(--space-1) var(--space-2);
+
+    border-radius: 6px;
+
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+.nav-list a:hover {
+    background-color: var(--blue);
+}
+
+
+/* ==============================
+   SECTIONS
+   ============================== */
+
+#home,
+#teams,
+#about {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: var(--space-6) var(--space-4);
+}
+
+
+#home {
+    background-color: var(--white);
+}
+
+
+/* ==============================
+   CARD LAYOUT
+   ============================== */
+
+.card-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: var(--space-3);
+
+    margin-top: var(--space-3);
+}
+
+
+.card {
+    padding: var(--space-3);
+
+    background-color: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(11, 37, 69, 0.10);
+}
+
+
+.card h3 {
+    color: var(--dark-navy);
+}
+
+
+.card p {
+    margin-bottom: 0;
+}
+
+
+/* ==============================
+   CONTACT FORM
+   ============================== */
+
+.contact-form {
+    max-width: 700px;
+
+    margin-top: var(--space-4);
+
+    padding: var(--space-4);
+
+    background-color: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(11, 37, 69, 0.10);
+}
+
+
+.form-group {
+    margin-bottom: var(--space-3);
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: var(--space-1);
+
+    color: var(--dark-navy);
+
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: var(--space-1);
+
+    border: 2px solid var(--border);
+
+    border-radius: 6px;
+
+    background-color: var(--white);
+
+    color: var(--text);
+
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+
+.form-group textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+
+/* Error state */
+
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: var(--error);
+}
+
+
+.error-message {
+    color: var(--error);
+
+    font-weight: 600;
+}
+
+
+.required {
+    color: var(--error);
+}
+
+
+/* ==============================
+   FIELDSET
+   ============================== */
+
+fieldset {
+    margin: 0 0 var(--space-3);
+
+    padding: var(--space-3);
+
+    border: 2px solid var(--border);
+
+    border-radius: 8px;
+}
+
+
+legend {
+    padding: 0 var(--space-1);
+
+    color: var(--dark-navy);
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+
+.radio-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-1);
+
+    margin-top: var(--space-1);
+}
+
+
+.radio-option input {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* ==============================
+   BUTTON
+   ============================== */
+
+button {
+    min-height: 44px;
+
+    padding: var(--space-1) var(--space-3);
+
+    border: 2px solid var(--dark-navy);
+
+    border-radius: 6px;
+
+    background-color: var(--dark-navy);
+
+    color: var(--white);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: var(--blue);
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.site-footer {
+    padding: var(--space-4);
+
+    background-color: var(--dark-navy);
+
+    color: var(--white);
+
+    text-align: center;
+}
+
+
+.site-footer p {
+    margin-bottom: 0;
+}
+
+
+/* ==============================
+   TABLET - 768px
+   ============================== */
+
+@media (max-width: 768px) {
+
+    #home,
+    #teams,
+    #about {
+        padding: var(--space-5) var(--space-3);
+    }
+
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: var(--space-2);
+    }
+
+
+    .site-header {
+        padding: var(--space-3);
+    }
+}
+
+
+/* ==============================
+   MOBILE - 480px
+   ============================== */
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+
+    #home,
+    #teams,
+    #about {
+        padding: var(--space-4) var(--space-2);
+    }
+
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact-form {
+        padding: var(--space-2);
+    }
+
+
+    .nav-list {
+        flex-direction: column;
+
+        gap: var(--space-1);
+    }
+}
+```
+
+### README section
+
+```markdown
+# Sports Central
+
+## Accessibility
+
+### WAVE Fixes
+
+- Added `lang="en"` to the HTML document.
+- Added descriptive page titles.
+- Added semantic `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>` elements.
+- Added an accessible navigation label with `aria-label`.
+- Added `aria-current="page"` to identify the current page.
+- Added proper `<label>` elements for all contact form fields.
+- Added `fieldset` and `legend` to group related radio buttons.
+- Added `required` and `aria-required` to required form fields.
+- Added an accessible error message using `role="alert"`.
+- Added visible keyboard focus indicators.
+- Used a responsive layout so content remains usable on small screens.
+
+## Color Contrast
+
+The website uses a consistent navy, blue, white, and gray color palette.
+
+Dark navy is used for headings, navigation, buttons, and other important elements so that text remains readable against light backgrounds.
+
+Error messages use a dark red color against a light or white background.
+
+The final colors should be verified with the WebAIM Contrast Checker before submission.
+
+## Gestalt Principles
+
+### Proximity
+
+I used proximity to group related sports and team information together inside individual cards.
+
+### Similarity
+
+I used similarity by giving the sports and team cards consistent padding, borders, backgrounds, rounded corners, and typography.
+
+## Visual Design
+
+The website uses a consistent navy and blue color palette across all pages.
+
+Montserrat is used for headings while Open Sans is used for body text.
+
+The website uses an 8px spacing system for consistent margins, padding, and gaps.
+
+CSS Grid is used for the multi-column card layout.
+
+## Responsive Design
+
+The website is designed for:
+
+- 320px mobile
+- 768px tablet
+- 1200px desktop
+
+Two CSS media queries are used to adjust the layout for tablet and mobile screens.
+
+## Testing
+
+The pages should be tested with WAVE for accessibility errors and warnings.
+
+The pages should also be tested using browser DevTools device emulation at 320px, 768px, and 1200px.
+```
+
+This combined version covers the **Milestone 2 accessibility requirements, Gestalt principles, consistent palette, responsive layout, and accessible contact form** while keeping your original Sports Central content.
