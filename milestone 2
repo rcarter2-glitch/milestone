@@ -1,0 +1,81 @@
+</header>
+<link rel="stylesheet" href="style.css">
+<main>
+
+    <!-- Home -->
+    <section id="home">
+        <h2>Welcome to Sports Central</h2>
+        <p>Your source for sports news, featured teams, and athlete information.</p>
+
+        <h2>Featured Sports</h2>
+
+        <div class="card-container">
+
+            <article class="card">
+                <h3>Football</h3>
+                <p>Latest football news, scores, and highlights.</p>
+            </article>
+
+            <article class="card">
+                <h3>Basketball</h3>
+                <p>Latest basketball news, rankings, and game recaps.</p>
+            </article>
+
+            <article class="card">
+                <h3>Soccer</h3>
+                <p>Latest soccer matches, standings, and player updates.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Teams -->
+    <section id="teams">
+        <h2>Featured Teams</h2>
+
+        <div class="card-container">
+
+            <article class="card">
+                <h3>Dallas Cowboys</h3>
+                <p>One of the NFL's most popular football teams.</p>
+            </article>
+
+            <article class="card">
+                <h3>Los Angeles Lakers</h3>
+                <p>A legendary NBA franchise with multiple championships.</p>
+            </article>
+
+            <article class="card">
+                <h3>Manchester City</h3>
+                <p>A top English Premier League soccer club.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Sports Central</h2>
+
+        <p>
+            Sports Central is a website created for sports fans to explore
+            information about popular sports, teams, and current events.
+        </p>
+
+        <h2>Contact Us</h2>
+
+        <h3>Email</h3>
+        <p>sportscentral@email.com</p>
+
+        <h3>Follow Us</h3>
+        <p>Facebook, Instagram, and X links will be added later.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Sports Central. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
