@@ -1,25 +1,18 @@
-/* ==============================
-   SPORTS CENTRAL - GLOBAL CSS
-   ============================== */
 
-/* Google Font pairing:
-   Montserrat = headings
-   Open Sans = body text
-*/
+   SPORTS CENTRAL
+   ============================== */
 
 :root {
     --navy: #12355b;
     --dark-navy: #0b2545;
     --blue: #1d5fa7;
-    --light-blue: #e8f1fa;
     --background: #f4f7fb;
     --white: #ffffff;
     --text: #1f2937;
-    --muted: #4b5563;
     --border: #b8c4d1;
     --error: #a61b1b;
-    --error-background: #fff1f1;
 
+    /* 8px spacing system */
     --space-1: 8px;
     --space-2: 16px;
     --space-3: 24px;
@@ -28,292 +21,404 @@
     --space-6: 48px;
 }
 
-/* ---------- Base ---------- */
+
+/* ==============================
+   BASIC STYLING
+   ============================== */
 
 * {
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     margin: 0;
+    padding: 0;
+
     background-color: var(--background);
     color: var(--text);
+
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 1.6;
 }
 
+
 h1,
 h2,
 h3 {
-    margin-top: 0;
     font-family: "Montserrat", sans-serif;
     color: var(--dark-navy);
     line-height: 1.25;
 }
 
+
 h1 {
     font-size: 2.25rem;
 }
+
 
 h2 {
     margin-bottom: var(--space-3);
     font-size: 1.75rem;
 }
 
+
 h3 {
     margin-bottom: var(--space-1);
     font-size: 1.25rem;
 }
+
 
 p {
     margin-top: 0;
     margin-bottom: var(--space-2);
 }
 
-a {
-    color: var(--dark-navy);
-    font-weight: 600;
-}
 
-a:hover {
-    color: var(--blue);
-}
+/* ==============================
+   ACCESSIBLE FOCUS
+   ============================== */
 
-/* Visible keyboard focus */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
+textarea:focus-visible {
     outline: 3px solid #f59e0b;
     outline-offset: 3px;
 }
 
-/* ---------- Header / Navigation ---------- */
+
+/* ==============================
+   HEADER
+   ============================== */
 
 .site-header {
+    padding: var(--space-3) var(--space-4);
+
     background-color: var(--dark-navy);
     color: var(--white);
-    padding: var(--space-3) var(--space-4);
 }
+
 
 .site-header h1 {
     margin-bottom: var(--space-2);
     color: var(--white);
 }
 
+
 .nav-list {
     display: flex;
     flex-wrap: wrap;
+
     gap: var(--space-2);
+
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 
+
 .nav-list a {
     display: inline-block;
+
     padding: var(--space-1) var(--space-2);
+
     border-radius: 6px;
+
     color: var(--white);
     text-decoration: none;
 }
+
 
 .nav-list a:hover {
     background-color: var(--blue);
 }
 
-/* ---------- Main Sections ---------- */
+
+/* ==============================
+   SECTIONS
+   ============================== */
 
 #home,
 #teams,
 #about {
     max-width: 1200px;
+
     margin: 0 auto;
+
     padding: var(--space-6) var(--space-4);
 }
+
 
 #home {
     background-color: var(--white);
 }
 
-/* ---------- Cards ---------- */
+
+/* ==============================
+   CARD LAYOUT
+   ============================== */
 
 .card-container {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: var(--space-3);
+
     margin-top: var(--space-3);
 }
 
+
 .card {
     padding: var(--space-3);
+
     background-color: var(--white);
+
     border: 1px solid var(--border);
+
     border-radius: 12px;
+
     box-shadow: 0 4px 12px rgba(11, 37, 69, 0.10);
 }
+
 
 .card h3 {
     color: var(--dark-navy);
 }
 
+
 .card p {
-    color: var(--text);
     margin-bottom: 0;
 }
 
-/* ---------- Contact Form ---------- */
+
+/* ==============================
+   CONTACT FORM
+   ============================== */
 
 .contact-form {
     max-width: 700px;
+
     margin-top: var(--space-4);
+
     padding: var(--space-4);
+
     background-color: var(--white);
+
     border: 1px solid var(--border);
+
     border-radius: 12px;
+
     box-shadow: 0 4px 12px rgba(11, 37, 69, 0.10);
 }
+
 
 .form-group {
     margin-bottom: var(--space-3);
 }
 
+
 .form-group label {
     display: block;
+
     margin-bottom: var(--space-1);
-    font-weight: 600;
+
     color: var(--dark-navy);
+
+    font-weight: 600;
 }
 
+
 .form-group input,
-.form-group textarea,
-.form-group select {
+.form-group textarea {
     width: 100%;
+
     min-height: 44px;
+
     padding: var(--space-1);
+
     border: 2px solid var(--border);
+
     border-radius: 6px;
+
     background-color: var(--white);
+
     color: var(--text);
-    font: inherit;
+
+    font-family: inherit;
+    font-size: 1rem;
 }
+
 
 .form-group textarea {
     min-height: 140px;
+
     resize: vertical;
 }
+
+
+/* Error state */
 
 .form-group input[aria-invalid="true"],
 .form-group textarea[aria-invalid="true"] {
     border-color: var(--error);
-    background-color: var(--error-background);
 }
 
+
 .error-message {
-    margin-top: var(--space-1);
     color: var(--error);
+
     font-weight: 600;
 }
+
 
 .required {
     color: var(--error);
 }
 
-/* ---------- Fieldset ---------- */
+
+/* ==============================
+   FIELDSET
+   ============================== */
 
 fieldset {
     margin: 0 0 var(--space-3);
+
     padding: var(--space-3);
+
     border: 2px solid var(--border);
+
     border-radius: 8px;
 }
 
+
 legend {
     padding: 0 var(--space-1);
+
+    color: var(--dark-navy);
+
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    color: var(--dark-navy);
 }
+
 
 .radio-option {
     display: flex;
+
     align-items: center;
+
     gap: var(--space-1);
+
     margin-top: var(--space-1);
 }
+
 
 .radio-option input {
     width: 20px;
     height: 20px;
 }
 
-/* ---------- Button ---------- */
+
+/* ==============================
+   BUTTON
+   ============================== */
 
 button {
     min-height: 44px;
+
     padding: var(--space-1) var(--space-3);
+
     border: 2px solid var(--dark-navy);
+
     border-radius: 6px;
+
     background-color: var(--dark-navy);
+
     color: var(--white);
+
     font-family: "Montserrat", sans-serif;
+
     font-size: 1rem;
     font-weight: 700;
+
     cursor: pointer;
 }
+
 
 button:hover {
     background-color: var(--blue);
 }
 
-/* ---------- Footer ---------- */
+
+/* ==============================
+   FOOTER
+   ============================== */
 
 .site-footer {
     padding: var(--space-4);
+
     background-color: var(--dark-navy);
+
     color: var(--white);
+
     text-align: center;
 }
+
 
 .site-footer p {
     margin-bottom: 0;
 }
 
-/* ---------- Tablet ---------- */
+
+/* ==============================
+   TABLET - 768px
+   ============================== */
 
 @media (max-width: 768px) {
+
     #home,
     #teams,
     #about {
         padding: var(--space-5) var(--space-3);
     }
 
+
     .card-container {
         grid-template-columns: repeat(2, 1fr);
+
         gap: var(--space-2);
     }
+
 
     .site-header {
         padding: var(--space-3);
     }
 }
 
-/* ---------- Mobile ---------- */
+
+/* ==============================
+   MOBILE - 480px
+   ============================== */
 
 @media (max-width: 480px) {
+
     h1 {
         font-size: 1.75rem;
     }
 
+
     h2 {
         font-size: 1.5rem;
     }
+
 
     #home,
     #teams,
@@ -321,16 +426,16 @@ button:hover {
         padding: var(--space-4) var(--space-2);
     }
 
+
     .card-container {
         grid-template-columns: 1fr;
     }
+
 
     .contact-form {
         padding: var(--space-2);
     }
 
+
     .nav-list {
         flex-direction: column;
-        gap: var(--space-1);
-    }
-}
