@@ -1,7 +1,7 @@
-
-``html
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,12 +28,332 @@
 
         <h1>Sports Central</h1>
 
+        <!-- Navigation -->
         <nav aria-label="Main navigation">
-            <ul class="nav-list">
+
+            <!-- Mobile Menu Button -->
+            <button
+                type="button"
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-menu"
+            >
+                ☰ Menu
+            </button>
+
+            <ul class="nav-list" id="main-menu">
+
                 <li>
                     <a href="#home" aria-current="page">Home</a>
                 </li>
 
+                <li>
+                    <a href="#teams">Teams</a>
+                </li>
+
+                <li>
+                    <a href="#about">About & Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Home -->
+        <section id="home">
+
+            <h2>Welcome to Sports Central</h2>
+
+            <p>
+                Your source for sports news, featured teams,
+                and athlete information.
+            </p>
+
+            <h2>Featured Sports</h2>
+
+            <div class="card-container">
+
+                <article class="card">
+                    <h3>Football</h3>
+
+                    <p>
+                        Latest football news, scores, and highlights.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>Basketball</h3>
+
+                    <p>
+                        Latest basketball news, rankings, and game recaps.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>Soccer</h3>
+
+                    <p>
+                        Latest soccer matches, standings, and player updates.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Teams -->
+        <section id="teams">
+
+            <h2>Featured Teams</h2>
+
+            <div class="card-container">
+
+                <article class="card">
+                    <h3>Dallas Cowboys</h3>
+
+                    <p>
+                        One of the NFL's most popular football teams.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>Los Angeles Lakers</h3>
+
+                    <p>
+                        A legendary NBA franchise with multiple championships.
+                    </p>
+                </article>
+
+
+                <article class="card">
+                    <h3>Manchester City</h3>
+
+                    <p>
+                        A top English Premier League soccer club.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- About and Contact -->
+        <section id="about">
+
+            <h2>About Sports Central</h2>
+
+            <p>
+                Sports Central is a website created for sports fans
+                to explore information about popular sports, teams,
+                and current events.
+            </p>
+
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Have a question or suggestion?
+                Complete the form below to contact the Sports Central team.
+            </p>
+
+
+            <!-- Accessible Contact Form -->
+            <form
+                class="contact-form"
+                id="contact-form"
+                action="#"
+                method="post"
+                novalidate
+            >
+
+                <!-- Name -->
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                        <span class="required" aria-hidden="true">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        required
+                        aria-required="true"
+                    >
+
+                    <!-- Name Error -->
+                    <p
+                        id="name-error"
+                        class="error-message"
+                        role="alert"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                        <span class="required" aria-hidden="true">*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                        aria-required="true"
+                    >
+
+                    <!-- Email Error -->
+                    <p
+                        id="email-error"
+                        class="error-message"
+                        role="alert"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+
+                <!-- Topic -->
+                <fieldset>
+
+                    <legend>What is your message about?</legend>
+
+                    <div class="radio-option">
+
+                        <input
+                            type="radio"
+                            id="question"
+                            name="topic"
+                            value="question"
+                        >
+
+                        <label for="question">
+                            General Question
+                        </label>
+
+                    </div>
+
+
+                    <div class="radio-option">
+
+                        <input
+                            type="radio"
+                            id="feedback"
+                            name="topic"
+                            value="feedback"
+                        >
+
+                        <label for="feedback">
+                            Website Feedback
+                        </label>
+
+                    </div>
+
+
+                    <div class="radio-option">
+
+                        <input
+                            type="radio"
+                            id="sports-news"
+                            name="topic"
+                            value="sports-news"
+                        >
+
+                        <label for="sports-news">
+                            Sports News
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Message -->
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                        <span class="required" aria-hidden="true">*</span>
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        aria-required="true"
+                    ></textarea>
+
+                    <!-- Message Error -->
+                    <p
+                        id="message-error"
+                        class="error-message"
+                        role="alert"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+
+                <!-- General Form Error -->
+                <p
+                    id="form-error"
+                    class="error-message"
+                    role="alert"
+                    aria-live="polite"
+                    hidden
+                >
+                    Please correct the errors above before submitting the form.
+                </p>
+
+
+                <!-- Submit -->
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 Sports Central. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
                 <li>
                     <a href="#teams">Teams</a>
                 </li>
